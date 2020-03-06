@@ -128,7 +128,7 @@ def main(config):
         t, frame = cvSink.grabFrame(img)
 
         # Run inference.
-        ans = engine.detect_with_image(Image.fromarray(frame), threshold=0.5, keep_aspect_ratio=True, relative_coord=False, top_k=10)
+        ans = engine.detect_with_image(Image.fromarray(frame), threshold=0.1, keep_aspect_ratio=True, relative_coord=False, top_k=10)
         nb_objects_entry.setNumber(len(ans))
 
         boxes = []
